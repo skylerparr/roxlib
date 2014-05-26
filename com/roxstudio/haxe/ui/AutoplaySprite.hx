@@ -1,6 +1,6 @@
 package com.roxstudio.haxe.ui;
 
-import nme.events.Event;
+import flash.events.Event;
 import spritesheet.Spritesheet;
 import spritesheet.AnimatedSprite;
 
@@ -13,7 +13,7 @@ class AutoplaySprite extends AnimatedSprite {
         super(spritesheet, smoothing);
         addEventListener(Event.ADDED_TO_STAGE, function(_) {
 //            trace("added to stage");
-            prevTime = nme.Lib.getTimer();
+            prevTime = flash.Lib.getTimer();
             if (autoplayBehavior == null) {
                 setAutoplayBehavior(spritesheet.behaviors.keys().next());
             }
@@ -31,7 +31,7 @@ class AutoplaySprite extends AnimatedSprite {
     }
 
     private function onFrame(_) {
-        var currTime = nme.Lib.getTimer();
+        var currTime = flash.Lib.getTimer();
         var deltaTime: Int = currTime - prevTime;
         this.update(deltaTime);
         prevTime = currTime;

@@ -1,20 +1,20 @@
 package com.roxstudio.haxe.gesture;
 
-import nme.ui.MultitouchInputMode;
-import nme.display.Sprite;
-import nme.display.DisplayObjectContainer;
+import flash.ui.MultitouchInputMode;
+import flash.display.Sprite;
+import flash.display.DisplayObjectContainer;
 import motion.actuators.GenericActuator;
 import motion.Actuate;
 import com.roxstudio.haxe.gesture.RoxGestureEvent;
 import haxe.Timer;
-import nme.Lib;
-import nme.display.InteractiveObject;
-import nme.events.Event;
-import nme.events.MouseEvent;
-import nme.events.TouchEvent;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.ui.Multitouch;
+import flash.Lib;
+import flash.display.InteractiveObject;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.events.TouchEvent;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.ui.Multitouch;
 
 #if haxe3
 private typedef Hash<T> = Map<String, T>;

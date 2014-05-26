@@ -1,31 +1,31 @@
 package com.roxstudio.haxe.ui;
 
-import nme.events.MouseEvent;
-import nme.display.InteractiveObject;
-import nme.events.EventDispatcher;
-import nme.events.Event;
-import nme.Lib;
+import flash.events.MouseEvent;
+import flash.display.InteractiveObject;
+import flash.events.EventDispatcher;
+import flash.events.Event;
+import flash.Lib;
 import com.roxstudio.haxe.game.GfxUtil;
 import haxe.Timer;
-import nme.text.TextFieldType;
+import flash.text.TextFieldType;
 import com.roxstudio.haxe.net.RoxURLLoader;
 import com.roxstudio.haxe.game.ResKeeper;
 import com.roxstudio.haxe.game.GameUtil;
 import com.roxstudio.haxe.game.ResKeeper;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.DisplayObject;
-import nme.display.DisplayObjectContainer;
-import nme.display.GradientType;
-import nme.display.Shape;
-import nme.display.Sprite;
-import nme.geom.Matrix;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.text.TextField;
-import nme.text.TextFormat;
-import nme.text.TextFormatAlign;
-import nme.utils.ByteArray;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.DisplayObject;
+import flash.display.DisplayObjectContainer;
+import flash.display.GradientType;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.text.TextField;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+import flash.utils.ByteArray;
 
 #if haxe3
 
@@ -61,7 +61,7 @@ class UiUtil {
     public static inline function textFormat(color: Int, size: Float, ?hAlign: Int = LEFT) : TextFormat {
         var format = new TextFormat();
 #if android
-        format.font = new nme.text.Font("/system/fonts/DroidSansFallback.ttf").fontName;
+        format.font = new flash.text.Font("/system/fonts/DroidSansFallback.ttf").fontName;
 #else
         format.font = "Microsoft YaHei";
 #end
@@ -182,7 +182,7 @@ class UiUtil {
     public static function button(?anchor: Int = TOP_LEFT, // anchor point relative to register point
                                   ?iconPath: String,
                                   ?text: String, ?fontColor: Int = 0, ?fontSize: Float = 24,
-                                  ?childrenAlign: Int = VCENTER, // alignment of children
+                                  ?childrenAlign: Int = VCENTER, // aligflash.t of children
                                   ?ninePatchPath: String,
                                   ?listener: Dynamic -> Void) : RoxFlowPane {
         var name = text;
@@ -265,8 +265,8 @@ class UiUtil {
 
     public static inline function rox_stopPropagation(event: Dynamic, ?immediate: Null<Bool> = false) {
 //#if cpp
-//        Reflect.setField(event, "nmeIsCancelled", true);
-//        if (immediate) Reflect.setField(event, "nmeIsCancelledNow", true);
+//        Reflect.setField(event, "flash.sCancelled", true);
+//        if (immediate) Reflect.setField(event, "flash.sCancelledNow", true);
 //
 //#else
         event.stopPropagation();

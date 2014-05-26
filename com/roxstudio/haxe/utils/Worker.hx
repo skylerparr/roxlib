@@ -2,7 +2,7 @@ package com.roxstudio.haxe.utils;
 
 import cpp.vm.Mutex;
 import cpp.vm.Thread;
-import nme.events.Event;
+import flash.events.Event;
 
 /**
  * ...
@@ -19,7 +19,7 @@ class Worker {
 		jobs = new List<Job>();
 		lock = new Mutex();
 		thread = Thread.create(run);
-		nme.Lib.current.stage.addEventListener(Event.ENTER_FRAME, update);
+		flash.Lib.current.stage.addEventListener(Event.ENTER_FRAME, update);
 	}
 	
 	public function addJob(job: Job) {

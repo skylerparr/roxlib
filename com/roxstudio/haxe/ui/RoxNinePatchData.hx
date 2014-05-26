@@ -1,9 +1,9 @@
 package com.roxstudio.haxe.ui;
 
-import nme.geom.Point;
-import nme.display.BitmapData;
-import nme.Vector;
-import nme.geom.Rectangle;
+import flash.geom.Point;
+import flash.display.BitmapData;
+import flash.Vector;
+import flash.geom.Rectangle;
 
 class RoxNinePatchData {
 

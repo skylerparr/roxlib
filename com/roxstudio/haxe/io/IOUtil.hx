@@ -1,7 +1,7 @@
 package com.roxstudio.haxe.io;
 
 import haxe.io.Bytes;
-import nme.utils.ByteArray;
+import flash.utils.ByteArray;
 
 class IOUtil {
 

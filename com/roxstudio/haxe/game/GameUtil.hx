@@ -2,12 +2,12 @@ package com.roxstudio.haxe.game;
 
 import haxe.io.BytesOutput;
 import haxe.io.Bytes;
-import nme.display.BitmapData;
+import flash.display.BitmapData;
 import com.roxstudio.haxe.utils.Random;
-import nme.Assets;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.media.Sound;
+import openfl.Assets;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.media.Sound;
 
 #if cpp
 import com.roxstudio.haxe.utils.Worker;

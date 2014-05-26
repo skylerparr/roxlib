@@ -1,12 +1,12 @@
 package com.roxstudio.haxe.ui;
 
-import nme.display.StageQuality;
+import flash.display.StageQuality;
 import com.roxstudio.haxe.utils.GbTracer;
-import nme.display.Sprite;
-import nme.display.Stage;
-import nme.display.StageAlign;
-import nme.display.StageScaleMode;
-import nme.Lib;
+import flash.display.Sprite;
+import flash.display.Stage;
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
+import flash.Lib;
 
 class RoxApp {
 
@@ -25,7 +25,7 @@ class RoxApp {
         screenWidth = stage.stageWidth;
         screenHeight = stage.stageHeight;
 //        trace(">>>>stage=("+screenWidth+","+screenHeight+")");
-//        trace(">>>>curr=("+nme.Lib.current.width+","+nme.Lib.current.height+")");
+//        trace(">>>>curr=("+flash.Lib.current.width+","+nme.Lib.current.height+")");
 #if flash
 //        haxe.Firebug.redirectTraces();
 #elseif cpp

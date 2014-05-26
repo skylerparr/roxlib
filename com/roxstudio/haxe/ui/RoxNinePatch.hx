@@ -1,11 +1,11 @@
 package com.roxstudio.haxe.ui;
 
 import flash.geom.Matrix;
-import nme.display.BitmapData;
-import nme.display.Sprite;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.Vector;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.Vector;
 
 class RoxNinePatch extends Sprite {
 

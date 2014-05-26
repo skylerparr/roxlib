@@ -1,7 +1,7 @@
 package com.roxstudio.haxe.ui;
 
-import nme.geom.Rectangle;
-import nme.geom.Point;
+import flash.geom.Rectangle;
+import flash.geom.Point;
 using com.roxstudio.haxe.ui.UiUtil;
 
 class RoxAnimate {

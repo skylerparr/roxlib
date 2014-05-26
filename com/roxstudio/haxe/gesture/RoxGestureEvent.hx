@@ -1,9 +1,9 @@
 package com.roxstudio.haxe.gesture;
 
-import nme.events.Event;
-import nme.events.MouseEvent;
-import nme.events.TouchEvent;
-import nme.geom.Point;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.events.TouchEvent;
+import flash.geom.Point;
 
 class RoxGestureEvent extends Event {
 
