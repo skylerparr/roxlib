@@ -65,8 +65,8 @@ class RoxGestureAgent {
     private var touchList: List<TouchPoint>;
     private var listenEvents: Array<String>;
     private var handler: Dynamic -> Void;
-    private var longPressTimer: GenericActuator;
-    private var tweener: GenericActuator;
+    private var longPressTimer: Timer;
+    private var tweener: Dynamic;
     private var overlay: Sprite; // used in capture mode, to capture events outside the owner
     /**
      * READY -> begin:BEGIN -> end:tap
@@ -113,12 +113,13 @@ class RoxGestureAgent {
     }
 
     public inline function startTween(target: Dynamic, interval: Float, properties: Dynamic) {
-        tweener = cast(Actuate.tween(target, interval, properties, false));
+        tweener = target;
+		Actuate.tween(target, interval, properties, false);
     }
 
     public inline function stopTween() {
         if (tweener != null) {
-            tweener.stop(null, false, false);
+			Actuate.stop(tweener);
             tweener = null;
         }
     }
@@ -224,7 +225,7 @@ class RoxGestureAgent {
             if (prim && type == RoxGestureEvent.TOUCH_BEGIN) {
                 state = BEGIN;
                 touch0 = pt;
-                longPressTimer = cast(Actuate.timer(longPressDelay).onComplete(sendLongPress, [ pt ]));
+                longPressTimer = Timer.delay(sendLongPress.bind(pt), Math.round(longPressDelay*1000));
                 stopTween();
                 if (mode == GESTURE_CAPTURE) {
                     var stage = Lib.current.stage;
@@ -332,8 +333,9 @@ class RoxGestureAgent {
     }
 
     private inline function cancelLongPress() {
+		trace("cancelLongPress", longPressTimer);
         if (longPressTimer != null) {
-            longPressTimer.stop(null, false, false);
+            longPressTimer.stop();
             longPressTimer = null;
         }
     }
