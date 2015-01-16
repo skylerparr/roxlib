@@ -333,7 +333,6 @@ class RoxGestureAgent {
     }
 
     private inline function cancelLongPress() {
-		trace("cancelLongPress", longPressTimer);
         if (longPressTimer != null) {
             longPressTimer.stop();
             longPressTimer = null;
